@@ -45,8 +45,3 @@ class GeoStore(Store):
     @property
     def longitude(self) -> str:
         return self.geo_result['longitude']
-
-    def args(self, *args, **kwargs):
-        y = { x: x for x in args}
-        for i in y:
-            print(i)
