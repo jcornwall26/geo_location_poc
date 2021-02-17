@@ -1,0 +1,22 @@
+
+[Master]
+init-hook='sys.path += ["./src"]'
+disable=C0111,C0103,W0621,E1101,R0903,W0613,R0201, W0511
+max-line-length=120
+ignore=src/api/migrations
+max-parents=9
+
+
+[SIMILARITIES]
+
+# Minimum lines number of a similarity.
+min-similarity-lines=25
+
+# Ignore comments when computing similarities.
+ignore-comments=yes
+
+# Ignore docstrings when computing similarities.
+ignore-docstrings=yes
+
+# Ignore imports when computing similarities.
+ignore-imports=no
