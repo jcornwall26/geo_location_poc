@@ -7,7 +7,7 @@ def test_geo_store():
     print('Looking for modules in:')
     print('\n'.join(sys.path))
     ...
-    #store = GeoStore(None, None)
+    store = GeoStore(None, None)
     assert store is not None
 
 if __name__ == "__main__":
