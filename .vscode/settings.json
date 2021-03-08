@@ -1,6 +1,13 @@
 {
     "python.linting.pycodestyleEnabled": false,
-    "python.linting.enabled": true,
+    "python.linting.enabled": false,
     "python.pythonPath": "/Users/jasoncornwall/.pyenv/versions/geolocate",
-    "python.linting.pylintEnabled": true
+    "python.linting.pylintEnabled": true,
+    "python.jediEnabled": true,
+    "python.testing.pytestArgs": [
+        "tests"
+    ],
+    "python.testing.unittestEnabled": false,
+    "python.testing.nosetestsEnabled": false,
+    "python.testing.pytestEnabled": true
 }

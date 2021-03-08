@@ -1,11 +1,13 @@
 import csv
 import os
+import sys
 import geo
 
 from typing import List
 
-input_csv = f'{os.path.dirname(__file__)}/input.csv'
-output_csv = f'{os.path.dirname(__file__)}/output.csv'
+input_csv = f'{os.path.dirname(__file__) or "./"}/input.csv'
+#output_csv = f'{os.path.dirname(__file__)}/output.csv'
+output_csv = '/mnt/ram/output.csv'
 
 api_key = "d54234f9b3b1ddf124c70cf33484e139"
 
@@ -43,16 +45,17 @@ def create_store_from_csv(csv_row):
 
 
 @log_response_type
-def perform_geo_coding(stores_to_geo_code):
-    geo_code_results = [geo.create_geo_coded_store(store)
-                        for store in stores_to_geo_code]
+def perform_geo_coding(stores_to_geo_code) -> List[geo.GeoStore]:
+    geo_code_results = [geo.create_geo_coded_store(store) for store in stores_to_geo_code]
     return geo_code_results
 
 
 def put_stores_to_output(geo_code_results: List[geo.GeoStore]):
-    for geo_store in geo_code_results:
-        ...
+    store = geo_code_results[0]
+    ...
 
 
 if __name__ == "__main__":
+    print('Looking for modules in:')
+    print('\n'.join(sys.path))
     geo_locate_stores()

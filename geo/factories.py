@@ -1,5 +1,5 @@
 import requests
-import geo.geo_store
+from geo.geo_store import GeoStore
 
 from http import HTTPStatus
 
@@ -12,5 +12,5 @@ def create_geo_coded_store(store):
         data = result.json().get('data', None)
         if data:
             print(data[0])
-            return geo.GeoStore(store['store'], data[0])  #todo handle more than one result
+            return GeoStore(store['store'], data[0])  #todo handle more than one result
     return None
